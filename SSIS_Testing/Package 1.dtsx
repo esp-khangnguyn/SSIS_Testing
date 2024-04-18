@@ -1,0 +1,2234 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/10/2024 1:42:11 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-EHTRFBV2"
+  DTS:CreatorName="LAPTOP-EHTRFBV2\Khang"
+  DTS:DTSID="{D02D0395-BF10-4A59-8F8F-CA27B66B1178}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="89"
+  DTS:VersionGUID="{633A1C22-F7AF-4369-939C-41ACF77845D4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{1D045338-2866-4FDB-A934-FB1CC5434725}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\Khang\Downloads\SuperStore_Orders.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{68C01B0A-A1D8-444B-9A05-8BD37A6D937C}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Khang\Downloads\SuperStore_Orders.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B649BE47-C9DF-4FB2-8EAD-D0367D5DAAE1}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\OLAP\SuperStore\SuperStore_Orders.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_id"
+              DTS:DTSID="{E1CD73FC-4C58-46FF-A7C1-C3FB456999B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_date"
+              DTS:DTSID="{41D7644A-775E-4CD1-AA6C-897E7C2217D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship_date"
+              DTS:DTSID="{85651DBE-1763-4C91-BAF9-192B83EB6F66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship_mode"
+              DTS:DTSID="{D19CFA76-2B1F-41DE-B436-FE61525374F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customer_name"
+              DTS:DTSID="{3E1404F3-404B-4DAF-A4EE-4E154730AC1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="segment"
+              DTS:DTSID="{29C3CEC6-A29F-4661-A702-C46E40315A2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state"
+              DTS:DTSID="{BEC2EE41-CAE8-47E5-90B6-E8173387738B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{4D331A17-5CF9-4D99-9B21-AE2084A280FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="market"
+              DTS:DTSID="{21006DFA-7F17-42EB-B399-D32297E372F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{80BB01E4-7F6C-4258-B5A8-DE18D9A34BEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_id"
+              DTS:DTSID="{D7BE7FFE-8179-4CF8-8E9D-1A7491A6430E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="category"
+              DTS:DTSID="{A3CA2A3E-A35D-438E-B982-E08151F0D220}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sub_category"
+              DTS:DTSID="{E9B1BE72-C3BC-4BEE-AD33-9B2F2064E593}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_name"
+              DTS:DTSID="{BBB87410-0AD6-483A-A32B-64480F414F8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sales"
+              DTS:DTSID="{5158848B-B77E-4720-821A-22FD7E5D4EBC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="quantity"
+              DTS:DTSID="{3D82E7A8-0450-4A9C-87B3-41150B4E8B00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="discount"
+              DTS:DTSID="{E92DFA99-3539-4686-84A7-4E6B4EE82A85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="profit"
+              DTS:DTSID="{F3C41479-8607-4316-8EFF-CAF55CDAB104}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipping_cost"
+              DTS:DTSID="{701B88E8-7037-4138-A92D-52BA78B9B612}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_priority"
+              DTS:DTSID="{85A83575-D9CC-4E40-97A5-FB87BB7BCA28}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="year"
+              DTS:DTSID="{80DA97B5-D9DB-4045-A179-39F16FA14ABC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-EHTRFBV2.SuperStoreDataWareHouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{987E1617-5896-49AC-A5EA-52746181B5D5}"
+      DTS:ObjectName="LAPTOP-EHTRFBV2.SuperStoreDataWareHouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-EHTRFBV2;Initial Catalog=SuperStoreDataWareHouse;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{987E1617-5896-49AC-A5EA-52746181B5D5}LAPTOP-EHTRFBV2.SuperStoreDataWareHouse;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-EHTRFBV2.SuperStoreDataWareHouse 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{324FD9BB-636E-4233-B791-5978B5B6B25E}"
+      DTS:ObjectName="LAPTOP-EHTRFBV2.SuperStoreDataWareHouse 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-EHTRFBV2;Initial Catalog=SuperStoreDataWareHouse;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{324FD9BB-636E-4233-B791-5978B5B6B25E}LAPTOP-EHTRFBV2.SuperStoreDataWareHouse;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{55316B55-94B7-4EC0-87B2-B5CD2D776BE8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{987E1617-5896-49AC-A5EA-52746181B5D5}"
+          SQLTask:SqlStatementSource="delete from fact_3" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Merge Customer into Fact_raw"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{bf4c5466-c1f4-4e5c-90d9-2a9405ba9d5d}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Merge Customer into Fact_raw"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Dim_Ship_Date"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Dim_Ship_Date]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-EHTRFBV2.SuperStoreDataWareHouse 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-EHTRFBV2.SuperStoreDataWareHouse 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_date_Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_date_Id]"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_date_Id]"
+                      name="ship_date_Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_date]"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_date]"
+                      name="ship_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_month]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_month]"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_month]"
+                      name="ship_month"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_quarter]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_quarter]"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_quarter]"
+                      name="ship_quarter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_year]"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_year]"
+                      name="ship_year"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_date_Id]"
+                      dataType="i4"
+                      name="ship_date_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_date]"
+                      dataType="dbTimeStamp"
+                      name="ship_date" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_month]"
+                      dataType="i4"
+                      name="ship_month" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_quarter]"
+                      dataType="i4"
+                      name="ship_quarter" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].ExternalColumns[ship_year]"
+                      dataType="i4"
+                      name="ship_year" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_date_Id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_date_Id]"
+                      name="ship_date_Id" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_date]"
+                      name="ship_date" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_month]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_month]"
+                      name="ship_month" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_quarter]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_quarter]"
+                      name="ship_quarter" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_year]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ship_year]"
+                      name="ship_year" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Customer into Fact_raw\Fact_2"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Fact_2"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Fact_2]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge Customer into Fact_raw\Fact_2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-EHTRFBV2.SuperStoreDataWareHouse 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-EHTRFBV2.SuperStoreDataWareHouse 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[fact_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[fact_id]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[fact_id]"
+                      name="fact_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_id]"
+                      name="order_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[ship_date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[ship_date]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[ship_date]"
+                      name="ship_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[ship_mode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[ship_mode]"
+                      length="50"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[ship_mode]"
+                      name="ship_mode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[state]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[product_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[product_id]"
+                      name="product_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[sales]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[sales]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[sales]"
+                      name="sales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[quantity]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[quantity]"
+                      name="quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[discount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[discount]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[discount]"
+                      name="discount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[profit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[profit]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[profit]"
+                      name="profit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[shipping_cost]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[shipping_cost]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[shipping_cost]"
+                      name="shipping_cost"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_priority]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[order_priority]"
+                      length="50"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_priority]"
+                      name="order_priority"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      name="customer_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_date_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[order_date_id]"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_date_id]"
+                      name="order_date_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[fact_id]"
+                      dataType="i4"
+                      name="fact_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[ship_date]"
+                      dataType="dbTimeStamp"
+                      name="ship_date" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[ship_mode]"
+                      dataType="wstr"
+                      length="50"
+                      name="ship_mode" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      dataType="wstr"
+                      length="255"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="product_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[sales]"
+                      dataType="r8"
+                      name="sales" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      dataType="i8"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[discount]"
+                      dataType="r8"
+                      name="discount" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[profit]"
+                      dataType="r8"
+                      name="profit" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[shipping_cost]"
+                      dataType="r8"
+                      name="shipping_cost" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[order_priority]"
+                      dataType="wstr"
+                      length="50"
+                      name="order_priority" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      dataType="i4"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].ExternalColumns[order_date_id]"
+                      dataType="i4"
+                      name="order_date_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[fact_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[fact_id]"
+                      name="fact_id" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      name="order_id" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[ship_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[ship_date]"
+                      name="ship_date" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[ship_mode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[ship_mode]"
+                      name="ship_mode" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[state]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[state]"
+                      name="state" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      name="product_id" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[sales]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[sales]"
+                      name="sales" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      dataType="i8"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      name="quantity" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[discount]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[discount]"
+                      name="discount" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[profit]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[profit]"
+                      name="profit" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[shipping_cost]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[shipping_cost]"
+                      name="shipping_cost" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[order_priority]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[order_priority]"
+                      name="order_priority" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      name="customer_id" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[order_date_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[order_date_id]"
+                      name="order_date_id" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Customer into Fact_raw\Fact_3"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Fact_3"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Fact_3]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge Customer into Fact_raw\Fact_3.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-EHTRFBV2.SuperStoreDataWareHouse 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-EHTRFBV2.SuperStoreDataWareHouse 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].Columns[customer_id]"
+                      cachedDataType="i4"
+                      cachedName="customer_id"
+                      externalMetadataColumnId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[customer_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      dataType="i4"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[fact_id]"
+                      dataType="i4"
+                      name="fact_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[order_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[ship_mode]"
+                      dataType="wstr"
+                      length="50"
+                      name="ship_mode" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      dataType="wstr"
+                      length="255"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      dataType="wstr"
+                      length="255"
+                      name="product_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[sales]"
+                      dataType="r8"
+                      name="sales" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[quantity]"
+                      dataType="i8"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[discount]"
+                      dataType="r8"
+                      name="discount" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[profit]"
+                      dataType="r8"
+                      name="profit" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[shipping_cost]"
+                      dataType="r8"
+                      name="shipping_cost" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[order_priority]"
+                      dataType="wstr"
+                      length="50"
+                      name="order_priority" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[order_date_id]"
+                      dataType="i4"
+                      name="order_date_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input].ExternalColumns[ship_date_Id]"
+                      dataType="i4"
+                      name="ship_date_Id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge Customer into Fact_raw\Fact_3.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_3.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Fact_3.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_3.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Customer into Fact_raw\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[ship_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ship_date"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[ship_date]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[fact_id]"
+                      cachedDataType="i4"
+                      cachedName="fact_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[fact_id]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[order_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="order_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_id]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[ship_mode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ship_mode"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[ship_mode]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[state]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="state"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[state]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[product_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="product_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[product_id]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[sales]"
+                      cachedDataType="r8"
+                      cachedName="sales"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[sales]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[quantity]"
+                      cachedDataType="i8"
+                      cachedName="quantity"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[quantity]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[discount]"
+                      cachedDataType="r8"
+                      cachedName="discount"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[discount]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[profit]"
+                      cachedDataType="r8"
+                      cachedName="profit"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[profit]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[shipping_cost]"
+                      cachedDataType="r8"
+                      cachedName="shipping_cost"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[shipping_cost]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[order_priority]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="order_priority"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_priority]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[customer_id]"
+                      cachedDataType="i4"
+                      cachedName="customer_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[customer_id]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[order_date_id]"
+                      cachedDataType="i4"
+                      cachedName="order_date_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_date_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Right Input].Columns[ship_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ship_date"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_date]" />
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Right Input].Columns[ship_date_Id]"
+                      cachedDataType="i4"
+                      cachedName="ship_date_Id"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_date_Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[fact_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[fact_id]"
+                      name="fact_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[fact_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[order_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[order_id]"
+                      name="order_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[order_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[ship_mode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[ship_mode]"
+                      name="ship_mode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[ship_mode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[state]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[state]"
+                      name="state">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[state]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[product_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[product_id]"
+                      name="product_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[product_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[sales]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[sales]"
+                      name="sales">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[sales]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[quantity]"
+                      dataType="i8"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[quantity]"
+                      name="quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[discount]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[discount]"
+                      name="discount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[discount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[profit]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[profit]"
+                      name="profit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[profit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[shipping_cost]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[shipping_cost]"
+                      name="shipping_cost">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[shipping_cost]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[order_priority]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[order_priority]"
+                      name="order_priority">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[order_priority]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[customer_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[customer_id]"
+                      name="customer_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[customer_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[order_date_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[order_date_id]"
+                      name="order_date_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input].Columns[order_date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[ship_date_Id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output].Columns[ship_date_Id]"
+                      name="ship_date_Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Right Input].Columns[ship_date_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Customer into Fact_raw\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[fact_id]"
+                      cachedDataType="i4"
+                      cachedName="fact_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[fact_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[order_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="order_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[ship_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ship_date"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[ship_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[ship_mode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ship_mode"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[ship_mode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[state]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="state"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[state]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[product_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="product_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[product_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[sales]"
+                      cachedDataType="r8"
+                      cachedName="sales"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[sales]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[quantity]"
+                      cachedDataType="i8"
+                      cachedName="quantity"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[quantity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[discount]"
+                      cachedDataType="r8"
+                      cachedName="discount"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[discount]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[profit]"
+                      cachedDataType="r8"
+                      cachedName="profit"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[profit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[shipping_cost]"
+                      cachedDataType="r8"
+                      cachedName="shipping_cost"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[shipping_cost]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[order_priority]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="order_priority"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_priority]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[customer_id]"
+                      cachedDataType="i4"
+                      cachedName="customer_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[customer_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input].Columns[order_date_id]"
+                      cachedDataType="i4"
+                      cachedName="order_date_id"
+                      lineageId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_date_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[fact_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[fact_id]"
+                      name="fact_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[fact_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_id]"
+                      name="order_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[ship_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[ship_date]"
+                      name="ship_date"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[ship_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[ship_mode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[ship_mode]"
+                      name="ship_mode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[ship_mode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[state]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[state]"
+                      name="state">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[state]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[product_id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[product_id]"
+                      name="product_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[product_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[sales]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[sales]"
+                      name="sales">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[sales]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[quantity]"
+                      dataType="i8"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[quantity]"
+                      name="quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[discount]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[discount]"
+                      name="discount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[discount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[profit]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[profit]"
+                      name="profit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[profit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[shipping_cost]"
+                      dataType="r8"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[shipping_cost]"
+                      name="shipping_cost">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[shipping_cost]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_priority]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_priority]"
+                      name="order_priority">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_priority]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[customer_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[customer_id]"
+                      name="customer_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_date_id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output].Columns[order_date_id]"
+                      name="order_date_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output].Columns[order_date_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Customer into Fact_raw\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Merge Customer into Fact_raw\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Inputs[Sort Input].Columns[ship_date_Id]"
+                      cachedDataType="i4"
+                      cachedName="ship_date_Id"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_date_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Inputs[Sort Input].Columns[ship_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ship_date"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Inputs[Sort Input].Columns[ship_month]"
+                      cachedDataType="i4"
+                      cachedName="ship_month"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_month]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Inputs[Sort Input].Columns[ship_quarter]"
+                      cachedDataType="i4"
+                      cachedName="ship_quarter"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_quarter]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Inputs[Sort Input].Columns[ship_year]"
+                      cachedDataType="i4"
+                      cachedName="ship_year"
+                      lineageId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_year]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_date_Id]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_date_Id]"
+                      name="ship_date_Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_date_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_date]"
+                      name="ship_date"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_month]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_month]"
+                      name="ship_month">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_month]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_quarter]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_quarter]"
+                      name="ship_quarter">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_quarter]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_year]"
+                      dataType="i4"
+                      lineageId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output].Columns[ship_year]"
+                      name="ship_year">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output].Columns[ship_year]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Merge Customer into Fact_raw.Paths[Merge Join Output]"
+              endId="Package\Merge Customer into Fact_raw\Fact_3.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Merge Customer into Fact_raw\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Merge Customer into Fact_raw.Paths[OLE DB Source Output]"
+              endId="Package\Merge Customer into Fact_raw\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Merge Customer into Fact_raw\Fact_2.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Merge Customer into Fact_raw.Paths[OLE DB Source Output1]"
+              endId="Package\Merge Customer into Fact_raw\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Merge Customer into Fact_raw\Dim_Ship_Date.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Merge Customer into Fact_raw.Paths[Sort Output]"
+              endId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Merge Customer into Fact_raw\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Merge Customer into Fact_raw.Paths[Sort Output1]"
+              endId="Package\Merge Customer into Fact_raw\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Merge Customer into Fact_raw\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{26089C93-D4B9-473A-9AAC-B0AF17ADCF23}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Merge Customer into Fact_raw" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="298.333317033119,119.599999168317" />
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Merge Customer into Fact_raw"
+          TopLeft="270.833318535653,219.466665847037" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="380.983317784386,161.199999168317">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.26666667872"
+              Start="0,0"
+              End="0,50.76666667872">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.76666667872" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Merge Customer into Fact_raw">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Merge Customer into Fact_raw\Dim_Ship_Date"
+          TopLeft="60,159.999998509883" />
+        <NodeLayout
+          Size="110.4,41.6"
+          Id="Package\Merge Customer into Fact_raw\Fact_3"
+          TopLeft="604.999991878867,99.9999994039531" />
+        <NodeLayout
+          Size="110.4,41.6"
+          Id="Package\Merge Customer into Fact_raw\Fact_2"
+          TopLeft="65.999999910593,60" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Merge Customer into Fact_raw\Sort"
+          TopLeft="252.999997124076,62.9999999552961" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Merge Customer into Fact_raw\Sort 1"
+          TopLeft="257.99999704957,163.999998450279" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Merge Customer into Fact_raw\Merge Join"
+          TopLeft="427.999994516373,101.999999374151" />
+        <EdgeLayout
+          Id="Package\Merge Customer into Fact_raw.Paths[OLE DB Source Output]"
+          TopLeft="176.399999910593,82.2999999776481">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.5999972134829,0"
+              Start="0,0"
+              End="69.0999972134829,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="69.0999972134829,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge Customer into Fact_raw.Paths[OLE DB Source Output1]"
+          TopLeft="211.2,182.799998480081">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.7999970495701,0"
+              Start="0,0"
+              End="39.2999970495701,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.2999970495701,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge Customer into Fact_raw.Paths[Sort Output]"
+          TopLeft="350.599997124076,83.7999999552962">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77.3999973922968,38.9999994188547"
+              Start="0,0"
+              End="69.8999973922968,38.9999994188547">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="34.6999986961484,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.6999986961484,0"
+                    Point2="38.6999986961484,0"
+                    Point3="38.6999986961484,4" />
+                  <mssgle:LineSegment
+                    End="38.6999986961484,34.9999994188547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.6999986961484,34.9999994188547"
+                    Point2="38.6999986961484,38.9999994188547"
+                    Point3="42.6999986961484,38.9999994188547" />
+                  <mssgle:LineSegment
+                    End="69.8999973922968,38.9999994188547" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge Customer into Fact_raw.Paths[Sort Output1]"
+          TopLeft="364.39999704957,184.799998450279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.5999974668026,-56.3999990761281"
+              Start="0,0"
+              End="56.0999974668026,-56.3999990761281">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="32.7466652030415,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.7466652030415,0"
+                    Point2="36.7466652030415,0"
+                    Point3="36.7466652030415,-4" />
+                  <mssgle:LineSegment
+                    End="36.7466652030415,-52.3999990761281" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.7466652030415,-52.3999990761281"
+                    Point2="36.7466652030415,-56.3999990761281"
+                    Point3="40.7466652030415,-56.3999990761281" />
+                  <mssgle:LineSegment
+                    End="56.0999974668026,-56.3999990761281" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge Customer into Fact_raw.Paths[Merge Join Output]"
+          TopLeft="557.599994516373,121.799999389052">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.3999973624943,0"
+              Start="0,0"
+              End="39.8999973624943,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.8999973624943,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
